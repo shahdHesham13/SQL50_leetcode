@@ -1,3 +1,5 @@
+# LeetCode_SQL_50
+
 This repository contains my solutions to LeetCode SQL 50 problems. This study plan included easy, medium and hard level questions from various topics:
 </br>
 * Selects
