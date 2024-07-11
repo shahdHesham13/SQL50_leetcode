@@ -1,0 +1,4 @@
+/* Write your T-SQL query statement below */
+SELECT A1.name FROM Employee A2, Employee A1 WHERE A2.managerId = A1.id
+GROUP BY A2.managerId ,A1.name
+HAVING count(*) >=5
