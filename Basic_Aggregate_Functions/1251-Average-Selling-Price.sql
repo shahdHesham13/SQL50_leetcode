@@ -1,7 +1,7 @@
--- Write your PostgreSQL query statement below
+# Write your MySQL query statement below
 SELECT p.product_id,
        ROUND(
-           COALESCE(SUM(CAST(p.price AS DECIMAL) * u.units) / NULLIF(SUM(u.units), 0), 0)
+           IFNULL(SUM(CAST(p.price AS DECIMAL) * u.units) / NULLIF(SUM(u.units), 0), 0)
        , 2) AS average_price
 FROM Prices p
 LEFT JOIN UnitsSold u
