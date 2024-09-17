@@ -7,3 +7,5 @@ JOIN
 	  GROUP BY customer_id
 ) AS sub
 ON d.customer_id = sub.customer_id AND d.order_date = sub.mini;
+
+/*kept giving error on some test case output 38 as the expected value is 37.5 what solve that making the ROUND >> 4 instead of 2*/
