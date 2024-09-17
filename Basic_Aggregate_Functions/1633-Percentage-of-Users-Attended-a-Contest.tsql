@@ -1,5 +1,5 @@
 /* Write your T-SQL query statement below */
-select contest_id, round( (CAST(count(user_id) AS DECIMAL)/ (select count(*) from Users))*100 ,2) as percentage 
+select contest_id, round(CAST(count(user_id) AS DECIMAL) * 100 / (select count(user_id) from Users) ,2) as percentage 
 from Register 
 group by contest_id
 ORDER BY percentage DESC , contest_id
